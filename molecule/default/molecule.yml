@@ -1,0 +1,21 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: consul_centos7-$TOX_ENVNAME
+    image: centos:7
+    privileged: True
+    command: '/sbin/init'
+    cap_add: ['SYS_ADMIN', 'SETPCAP']
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
