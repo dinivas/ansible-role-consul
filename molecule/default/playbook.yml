@@ -3,3 +3,6 @@
   hosts: all
   roles:
     - role: ansible-role-consul
+      consul_node_role: bootstrap
+      consul_client_address: '0.0.0.0'
+      consul_encrypt_enable: false
