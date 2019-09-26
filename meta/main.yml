@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   author: orachide
+  role_name: consul
   description: Deploy Hashicorp Consul as a service
   company: runadium.fr
 
@@ -16,5 +17,6 @@ galaxy_info:
   galaxy_tags:
     - consul
     - hashicorp
+    - dinivas
 
 dependencies: []
