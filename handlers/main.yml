@@ -4,6 +4,7 @@
 - name: restart consul on Linux
   service:
     name: consul
+    enabled: yes
     state: restarted
   when: ansible_os_family != "Windows"
   listen: 'restart consul'
